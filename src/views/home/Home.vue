@@ -5,8 +5,8 @@
     <el-container>
       <el-aside width="200px">
         <!-- 左侧导航 -->
-        <el-menu :background-color="color.backgroundColor" :text-color="color.textColor" :active-text-color="color.activeColor" unique-opened>
-          <el-submenu :index="item.id +''" v-for="item in menuList" :key="item.id">
+        <el-menu :background-color="color.backgroundColor" :text-color="color.textColor" :active-text-color="color.activeColor" unique-opened router>
+          <el-submenu :index="item.path +''" v-for="item in menuList" :key="item.id">
             <!-- 一级菜单模板区域 -->
             <template slot="title">
               <!-- 图标 -->
@@ -15,7 +15,7 @@
               <span>{{item.authName}}</span>
             </template>
             <!-- 二级菜单 -->
-            <el-menu-item :index="subItem.id + ''" v-for="subItem in item.children" :key='subItem.id'>
+            <el-menu-item :index="subItem.path + ''" v-for="subItem in item.children" :key='subItem.id'>
               <!-- 二级菜单模板区域 -->
               <template slot="title">
                 <!-- 图标 -->
@@ -28,9 +28,10 @@
 
         </el-menu>
       </el-aside>
-      <el-main>Main</el-main>
+      <el-main><router-view></router-view></el-main>
     </el-container>
   </el-container>
+
 </template>
 
 <script>
