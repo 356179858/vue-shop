@@ -19,7 +19,15 @@
                     <el-button type="primary">添加用户</el-button>
                 </el-col>
             </el-row>
-
+            <el-table :data="tableData" style="width: 100%" border stripe>
+                <el-table-column type="index" label="序号"  align="center" width="90"></el-table-column>
+                <el-table-column prop="username" label="姓名" align="center"></el-table-column>
+                <el-table-column prop="email" label="邮箱" align="center"></el-table-column>
+                <el-table-column prop="mobile" label="电话" align="center"></el-table-column>
+                <el-table-column prop="role_name" label="角色" align="center"></el-table-column>
+                <el-table-column prop="mg_state" label="状态" align="center"></el-table-column>
+                <el-table-column label="操作" align="center"></el-table-column>
+            </el-table>
         </el-card>
     </div>
 </template>
@@ -33,31 +41,159 @@
                     pagenum: 1,
                     pageSize: 2,
                 },
-                userList: [],
+                tableData: [{
+                    "id": 1,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 2,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 3,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 4,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 5,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 6,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 7,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 8,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 9,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 10,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 11,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 12,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 13,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }, {
+                    "id": 14,
+                    "username": "tige117",
+                    "mobile": "18616358651",
+                    "type": 1,
+                    "email": "tige112@163.com",
+                    "create_time": "2017-11-09T20:36:26.000Z",
+                    "mg_state": true, // 当前用户的状态
+                    "role_name": "炒鸡管理员"
+                }],
                 total: 0
             }
         },
         created() {
-            this.getUserList()
+            // this.getUserList()
         },
         methods: {
-            async getUserList() {
-                const {
-                    data: res
-                } = await this.$http.get('uesrs', {
-                    params: this.queryInfo
-                })
-                if(res.meta.state !==200){
-                    return this.$message.error('获取用户列表失败')
-                }
-                this.userList = res.data.users
-                this.total = res.data.total
-                console.log(res);
-            }
+            // async getUserList() {
+            //     const {
+            //         data: res
+            //     } = await this.$http.get('uesrs', {
+            //         params: this.queryInfo
+            //     })
+            //     if (res.meta.state !== 200) {
+            //         return this.$message.error('获取用户列表失败')
+            //     }
+            //     this.userList = res.data.users
+            //     this.total = res.data.total
+            //     console.log(res);
+            // }
         }
     }
 </script>
 
 <style scoped lang="less">
-
+    .el-table{
+        margin-top: 20px;
+    }
 </style>
